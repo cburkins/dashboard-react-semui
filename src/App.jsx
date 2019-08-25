@@ -1,9 +1,8 @@
 import React from "react";
 import "./App.css";
-import { Container, Header, List, Divider, Item, Button, Sidebar, Menu, Segment, Icon, Image } from "semantic-ui-react";
+import { Button, Sidebar, Menu, Segment, Icon } from "semantic-ui-react";
 
-import ExampleButton from "./exampleButton";
-import ExampleModal from "./exampleModal";
+import Dashboard from "./components/Dashboard";
 
 class App extends React.Component {
     state = { visible: false };
@@ -17,6 +16,7 @@ class App extends React.Component {
 
         return (
             <div className="App">
+                {/* Buttons to show/hide the sidebar */}
                 <Button.Group>
                     <Button disabled={visible} onClick={this.handleShowClick}>
                         Show sidebar
@@ -26,6 +26,7 @@ class App extends React.Component {
                     </Button>
                 </Button.Group>
 
+                {/* Define the sidebar itself */}
                 <Sidebar.Pushable as={Segment}>
                     <Sidebar
                         as={Menu}
@@ -49,28 +50,9 @@ class App extends React.Component {
                             Channels
                         </Menu.Item>
                     </Sidebar>
+                    {/* Area where page content goes, and sidebar slides over this content */}
                     <Sidebar.Pusher dimmed={visible}>
-                        {/* page content goes here */}
-                        <Container style={{ margin: 20 }}>
-                            <Header as="h2">This example is powered by Semantic UI React</Header>
-                            <ExampleButton />
-                            <Divider hidden />
-                            <ExampleModal />
-                            <Divider hidden />
-                            <List ordered>
-                                <List.Item as="a">First item</List.Item>
-                                <List.Item as="a">Second item</List.Item>
-                                <List.Item as="a">Third item</List.Item>
-                                <List.Item as="a">Fourth item</List.Item>
-                                <List.Item href="http://www.google.com" target="_blank">
-                                    Go To Google
-                                </List.Item>
-                            </List>
-                            <Divider />
-                            <Item href="http://www.google.com" target="_blank">
-                                Go To Google
-                            </Item>
-                        </Container>
+                        <Dashboard />
                     </Sidebar.Pusher>
                     More stuff here
                 </Sidebar.Pushable>
