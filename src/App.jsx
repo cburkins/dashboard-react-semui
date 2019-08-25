@@ -49,35 +49,31 @@ class App extends React.Component {
                             Channels
                         </Menu.Item>
                     </Sidebar>
-
-                    <Sidebar.Pusher>
-                        <Segment basic>
-                            <Header as="h3">Application Content</Header>
-                            <Image src="https://react.semantic-ui.com/images/wireframe/paragraph.png" />
-                        </Segment>
+                    <Sidebar.Pusher dimmed={visible}>
+                        {/* page content goes here */}
+                        <Container style={{ margin: 20 }}>
+                            <Header as="h2">This example is powered by Semantic UI React</Header>
+                            <ExampleButton />
+                            <Divider hidden />
+                            <ExampleModal />
+                            <Divider hidden />
+                            <List ordered>
+                                <List.Item as="a">First item</List.Item>
+                                <List.Item as="a">Second item</List.Item>
+                                <List.Item as="a">Third item</List.Item>
+                                <List.Item as="a">Fourth item</List.Item>
+                                <List.Item href="http://www.google.com" target="_blank">
+                                    Go To Google
+                                </List.Item>
+                            </List>
+                            <Divider />
+                            <Item href="http://www.google.com" target="_blank">
+                                Go To Google
+                            </Item>
+                        </Container>
                     </Sidebar.Pusher>
+                    More stuff here
                 </Sidebar.Pushable>
-
-                <Container style={{ margin: 20 }}>
-                    <Header as="h2">This example is powered by Semantic UI React</Header>
-                    <ExampleButton />
-                    <Divider hidden />
-                    <ExampleModal />
-                    <Divider hidden />
-                    <List ordered>
-                        <List.Item as="a">First item</List.Item>
-                        <List.Item as="a">Second item</List.Item>
-                        <List.Item as="a">Third item</List.Item>
-                        <List.Item as="a">Fourth item</List.Item>
-                        <List.Item href="http://www.google.com" target="_blank">
-                            Go To Google
-                        </List.Item>
-                    </List>
-                    <Divider />
-                    <Item href="http://www.google.com" target="_blank">
-                        Go To Google
-                    </Item>
-                </Container>
             </div>
         );
     }
