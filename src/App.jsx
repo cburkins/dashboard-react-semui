@@ -54,7 +54,6 @@ class App extends React.Component {
                     <Sidebar.Pusher dimmed={visible}>
                         <Dashboard />
                     </Sidebar.Pusher>
-                    More stuff here
                 </Sidebar.Pushable>
             </div>
         );
