@@ -37,9 +37,9 @@ class App extends React.Component {
                         vertical
                         visible={visible}
                         width="thin">
-                        <Menu.Item as="a">
-                            <Icon name="home" />
-                            Home
+                        <Menu.Item as="a" onClick={this.handleHideClick} color="red">
+                            <Icon name="homee" />
+                            Homee
                         </Menu.Item>
                         <Menu.Item as="a">
                             <Icon name="gamepad" />
