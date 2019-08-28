@@ -1,7 +1,6 @@
 import React from "react";
 import { Header, List, Divider, Item } from "semantic-ui-react";
 
-// import styled from "styled-components";
 import PropTypes from "prop-types";
 import DashboardDataCard from "../components/DashboardDataCard";
 import ExampleButton from "../components/exampleButton";

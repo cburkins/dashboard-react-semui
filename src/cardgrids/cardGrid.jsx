@@ -2,8 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components/macro";
 
-const DataCardContainer = styled.div`
+// Styled Component
+const DataCardDiv = styled.div`
+    /* Critical for functionality of dashboard, be carefule about changing */
     display: grid;
+
+    /* Not critical, just makes it pretty, so change */
     grid-gap: 1rem;
 `;
 
@@ -13,7 +17,7 @@ const CardGrid = function(props) {
         gridTemplateColumns: `repeat(${props.columns}, ${props.column_width})`,
         gridTemplateRows: `repeat(${props.rows},${props.row_height})`
     };
-    return <DataCardContainer style={style}>{props.children}</DataCardContainer>;
+    return <DataCardDiv style={style}>{props.children}</DataCardDiv>;
 };
 
 // Set default props in case they aren't passed to us by the caller

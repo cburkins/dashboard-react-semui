@@ -3,15 +3,19 @@ import PropTypes from "prop-types";
 // import styled from "styled-components";
 import styled from "styled-components/macro";
 
-const DataCard = styled.div`
-    background: #c6c3c3;
+// Styled component
+const DataCardDiv = styled.div`
+    /* Critical for functionality of dashboard, be carefule about changing */
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 100%;
     min-height: 100%;
     min-width: 100%;
+
+    /* Not critical, just makes it pretty, so change */
     padding: 5px;
+    background: #c6c3c3;
 `;
 
 const CardBody = styled.div`
@@ -45,9 +49,9 @@ class DashboardDataCard extends React.PureComponent {
         }
 
         return (
-            <DataCard style={styles}>
+            <DataCardDiv style={styles}>
                 <CardBody style={cardBody_styles}>{this.props.children}</CardBody>
-            </DataCard>
+            </DataCardDiv>
         );
     }
 }
